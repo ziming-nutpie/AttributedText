@@ -8,12 +8,7 @@
 
 import SwiftUI
 
-/// `AttributedText` is a SwiftUI view component designed to render text with custom attributes and optional interactive behaviors.
-/// This class supports detailed customization for each character within the text, handles tap actions, and dynamically adjusts
-///
-/// - Notes:
-///   - If using the `.underline()` modifier, it's important to specify the underline color explicitly to ensure visibility and style consistency.
-///     For example, you would use `.underline(color: .blue)` to apply a blue underline.
+
 public struct AttributedText: View {
     private var attributedString: AttributedString
     private var onTap: (() -> Void)? = nil

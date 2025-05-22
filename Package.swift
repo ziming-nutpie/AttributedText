@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "TappableText",
+    name: "AttributedText",
     platforms: [
         .iOS(.v15),
         .macOS(.v12)
@@ -12,16 +12,16 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "TappableText",
-            targets: ["TappableText"]),
+            name: "AttributedText",
+            targets: ["AttributedText"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "TappableText", dependencies: [], path: "Sources"),
+            name: "AttributedText", dependencies: [], path: "Sources"),
         .testTarget(
-            name: "TappableTextTests",
-            dependencies: ["TappableText"]),
+            name: "AttributedTextTests",
+            dependencies: ["AttributedText"]),
     ]
 )

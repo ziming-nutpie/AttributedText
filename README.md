@@ -1,71 +1,87 @@
 # AttributedText
 
-A SwiftUI component for rendering richly attributed text with tappable (interactive) segments.
+AttributedText is a text processing library for SwiftUI that provides a simple way to create and manage text views with rich text attributes. The library supports text concatenation, tap event handling, and custom styling.
 
 ## Features
-- Render text with custom attributes (color, font, underline, etc.)
-- Make any part of the text tappable and handle tap actions
-- Simple API, fully SwiftUI compatible
+
+- Rich text attribute support
+- Text concatenation operations
+- Tap event handling
+- Custom text styling
+- Fully SwiftUI compatible
+
+## Requirements
+
+- iOS 15.0+
+- macOS 12.0+
+- Swift 5.10+
 
 ## Installation
 
 ### Swift Package Manager
-Add the following to your `Package.swift` dependencies:
 
-```swift
-.package(url: "<your-repo-url>", from: "1.0.0")
+In Xcode, select File > Add Packages... and enter the repository URL:
+
+```
+https://github.com/yourusername/AttributedText.git
 ```
 
-And add `AttributedText` as a dependency for your target:
+## Usage Examples
+
+### Basic Usage
 
 ```swift
-.target(
-    name: "YourApp",
-    dependencies: [
-        .product(name: "AttributedText", package: "AttributedText")
-    ]
-)
+AttributedText("Hello World")
 ```
 
-Or, in Xcode: `File > Add Packages...`，输入你的仓库地址。
+### Adding Styles
 
-## Usage
-
-### Basic Example
 ```swift
-import AttributedText
+AttributedText("Styled Text") { text in
+    text.foregroundColor = .green
+}
+```
 
-struct ContentView: View {
-    var body: some View {
-        AttributedText("Hello, world!")
+### Adding Tap Events
+
+```swift
+AttributedText("Clickable Text")
+    .onTap {
+        print("Text tapped!")
     }
-}
 ```
 
-### Tappable Text Example
+### Text Concatenation
+
 ```swift
-AttributedText("Normal ") +
-AttributedText("Tappable") { text in
+AttributedText("Hello ")
+    +
+AttributedText("World") { text in
     text.foregroundColor = .blue
-    text.underlineStyle = .single
 }
-.onTap {
-    print("Tappable text tapped!")
-} +
-AttributedText(" Text")
+    .onTap {
+        print("World tapped!")
+    }
 ```
 
-### Custom Font and Color
+## Complete Example
+
 ```swift
-AttributedText("Custom Style") { text in
-    text.foregroundColor = .red
-    text.font = .system(size: 20, weight: .bold)
+Group {
+    AttributedText("Test ")
+        +
+    AttributedText("Tappable Text") { text in
+        text.foregroundColor = .green
+    }
+    .onTap {
+        print("Test")
+    }
+        +
+    AttributedText(" Short")
 }
+.font(.system(size: 28))
 ```
-
-## Notes
-- If you use `.underline()`, specify the color for best results: `.underline(color: .blue)`
-- Combine multiple `AttributedText` instances with `+` to build complex rich text.
 
 ## License
-MIT 
+
+Copyright © 2024 Nut AI. All rights reserved. 

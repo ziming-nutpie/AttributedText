@@ -65,24 +65,75 @@ public struct AttributedText: View {
     }
 }
 
-#Preview {
-    Group {
-        AttributedText("Test ")
-        
-        +
-        
-        AttributedText("Tappable Text") { text in
-            text.foregroundColor = .green
-        }
-        .onTap {
-            print("Test")
-        }
-        
-        +
-        
-        AttributedText(" Short")
-
+#Preview("Multiple Styles") {
+    AttributedText("Bold ") { text in
+        text.font = .system(size: 18, weight: .bold)
     }
-    .font(.system(size: 28))
-    
+    +
+    AttributedText("Italic ") { text in
+        text.font = .system(size: 18, weight: .medium).italic()
+    }
+    +
+    AttributedText("Colored") { text in
+        text.foregroundColor = .blue
+        text.underlineStyle = .single
+    }
+}
+
+#Preview("Interactive") {
+    AttributedText("Click ")
+        +
+    AttributedText("here") { text in
+        text.foregroundColor = .blue
+        text.underlineStyle = .single
+    }
+    .onTap {
+        print("Link tapped!")
+    }
+        +
+    AttributedText(" to see more")
+}
+
+#Preview("With Background") {
+    AttributedText("Hello ") { text in
+        text.backgroundColor = .yellow
+    }
+    +
+    AttributedText("World") { text in
+        text.backgroundColor = .green
+        text.foregroundColor = .white
+        text.font = .system(size: 20, weight: .bold)
+    }
+    +
+    AttributedText("!") { text in
+        text.backgroundColor = .blue
+        text.foregroundColor = .white
+    }
+}
+
+#Preview("Complex") {
+    AttributedText("Welcome to ") { text in
+        text.foregroundColor = .gray
+    }
+        +
+    AttributedText("AttributedText") { text in
+        text.foregroundColor = .blue
+        text.font = .system(size: 20, weight: .bold)
+    }
+        +
+    AttributedText("! ") { text in
+        text.foregroundColor = .gray
+    }
+        +
+    AttributedText("Try it") { text in
+        text.foregroundColor = .green
+        text.underlineStyle = .single
+    }
+    .onTap {
+        print("Try it tapped!")
+    }
+        +
+    AttributedText(" now.") { text in
+        text.foregroundColor = .gray
+    }
 }

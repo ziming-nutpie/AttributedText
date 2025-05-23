@@ -79,24 +79,6 @@ AttributedText("World") { text in
     }
 ```
 
-## Complete Example
-
-```swift
-Group {
-    AttributedText("Test ")
-        +
-    AttributedText("Tappable Text") { text in
-        text.foregroundColor = .green
-    }
-    .onTap {
-        print("Test")
-    }
-        +
-    AttributedText(" Short")
-}
-.font(.system(size: 28))
-```
-
 ## License
 
 MIT License

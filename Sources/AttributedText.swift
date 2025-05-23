@@ -26,7 +26,7 @@ public struct AttributedText: View {
         return tapHandlers[id]
     }
 
-    init(_ stringKey: String,
+    public init(_ stringKey: String = "",
          modifier: ((_ text: inout AttributedString) -> Void)? = nil,
          onTap: (() -> Void)? = nil) {
         var attributedString = AttributedString(stringKey)

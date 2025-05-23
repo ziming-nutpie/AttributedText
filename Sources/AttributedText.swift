@@ -63,6 +63,10 @@ public struct AttributedText: View {
         copy.onTap = action
         return copy
     }
+
+    public static func += (lhs: inout Self, rhs: Self) {
+        lhs = lhs + rhs
+    }
 }
 
 #Preview("Multiple Styles") {

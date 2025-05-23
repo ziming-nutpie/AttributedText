@@ -63,7 +63,7 @@ AttributedText("Styled Text") { text in
 AttributedText("Clickable Text")
     .onTap {
         print("Text tapped!")
-    }
+}
 ```
 
 ### Text Concatenation
@@ -74,9 +74,9 @@ AttributedText("Hello ")
 AttributedText("World") { text in
     text.foregroundColor = .blue
 }
-    .onTap {
+.onTap {
         print("World tapped!")
-    }
+}
 ```
 
 ## License

@@ -35,7 +35,7 @@ public struct AttributedText: View {
         self.onTap = onTap
     }
 
-    static func + (lhs: Self, rhs: Self) -> Self {
+    public static func + (lhs: Self, rhs: Self) -> Self {
         var result = lhs
         var rhsString = rhs.attributedString
         

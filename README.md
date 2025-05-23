@@ -4,10 +4,10 @@ AttributedText is a SwiftUI library that simplifies the creation of mixed-style 
 
 ## Preview
 
-<img src="assets/1.png" width="150">
-<img src="assets/2.png" width="150">
-<img src="assets/3.png" width="150">
-<img src="assets/4.png" width="150">
+<img src="assets/1.png" width="200">
+<img src="assets/2.png" width="200">
+<img src="assets/3.png" width="200">
+<img src="assets/4.png" width="200">
 
 ## Features
 

@@ -5,16 +5,16 @@ AttributedText is a SwiftUI library that simplifies the creation of mixed-style 
 ## Preview
 
 ### With Background
-<img src="assets/3.png" width="300" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; background: white;">
+<img src="assets/With Background.png" width="300" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; background: white;">
 
 ### Multiple Styles
-<img src="assets/1.png" width="300" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; background: white;">
+<img src="assets/Multiple Styles.png" width="300" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; background: white;">
 
 ### Interactive
-<img src="assets/2.png" width="300" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; background: white;">
+<img src="assets/Tappable.png" width="300" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; background: white;">
 
 ### Complex
-<img src="assets/4.png" width="300" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; background: white;">
+<img src="assets/Mixed.png" width="300" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; background: white;">
 
 ## Features
 

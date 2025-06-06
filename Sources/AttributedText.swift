@@ -29,7 +29,7 @@ public struct AttributedText: View {
     public init(_ stringKey: String = "",
          modifier: ((_ text: inout AttributedString) -> Void)? = nil,
          onTap: (() -> Void)? = nil) {
-        var attributedString = AttributedString(stringKey)
+        var attributedString = AttributedString(NSLocalizedString(stringKey, comment: ""))
         modifier?(&attributedString)
         self.attributedString = attributedString
         self.onTap = onTap

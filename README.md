@@ -1,6 +1,7 @@
 # AttributedText
 
-If you find this library useful to you, please give us a star ⭐️! Apprerciate it! \n
+If you find this library useful to you, please give us a star ⭐️! Apprerciate it!
+<br>
 AttributedText is a SwiftUI library that simplifies the creation of mixed-style text by wrapping SwiftUI's native AttributedString. It provides a more convenient way to create text with multiple styles and adds an easy-to-use tap handling functionality.
 
 ## Preview
